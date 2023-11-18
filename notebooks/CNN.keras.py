@@ -80,8 +80,10 @@ Here are the first 8 images in the training dataset, visualized using
 the KerasCV plot_image_gallery utility.
 """
 
+# the take function below will take the first batch of 128 and unbatch the images
 vis_ds = train_ds.take(1).unbatch()
 
+# the second take here will take the first 8 images from the first batch
 vis_ds = vis_ds.take(8)
 
 
