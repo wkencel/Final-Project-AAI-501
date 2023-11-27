@@ -295,10 +295,6 @@ img_array = tf.expand_dims(img_array, 0)  # Create batch axis
 predictions = model.predict(img_array)
 score = float(predictions[0])
 
-# print the output
-
-# Just for illustration, replace 0.5 with your score value
-score = 0.5
 # Define the materials as list
 materials = ["cardboard", "glass", "metal", "paper", "plastic", "trash"]
 
@@ -309,3 +305,6 @@ output_strings = [f"{100 * (1 - score):.2f}% {material}" if material == "cardboa
 # Join and print
 output = " and ".join(output_strings)
 print(f"This image is {output}.")
+
+
+# Test with image
