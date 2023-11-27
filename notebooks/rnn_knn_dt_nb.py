@@ -94,7 +94,7 @@ def naive_bayes_classifier(x_train, y_train, x_test, y_test):
 # See what labels are given based on each classifier
 def test_with_image(classifier):
     # Test with an image
-    test_image_path = '../data/trash_images/cardboard/cardboard_015.jpg'
+    test_image_path = '../data/kim_test_images/my_glass1.jpg'
     test_image = io.imread(test_image_path)
     img = transform.resize(test_image, (64, 64))  # Resize images to a consistent size
     img = img.flatten()

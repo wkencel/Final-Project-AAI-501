@@ -30,6 +30,7 @@ images, labels = load_images(data_dir)
 label_encoder = LabelEncoder()
 encoded_labels = label_encoder.fit_transform(labels)
 
+
 # Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(images, encoded_labels, test_size=0.2, random_state=42)
 
@@ -47,10 +48,11 @@ accuracy = accuracy_score(y_test, y_pred)
 print(f"Accuracy: {accuracy * 100:.2f}%")
 
 # Test with an image
-test_image_path = '../data/trash_images/cardboard/cardboard_015.jpg'
+test_image_path = '../data/kim_test_images/my_glass1.jpg'
 test_image = io.imread(test_image_path)
 img = transform.resize(test_image, (64, 64))  # Resize images to a consistent size
-img.flatten()
-img.reshape(1, -1)
+img = img.flatten()
+img = img.reshape(1, -1)
 prediction = rf_classifier.predict(img)
-print(f'The predicted class for the given image is: {prediction}')
+label = label_encoder.inverse_transform(prediction)
+print(f'The predicted class for the given image is: {label}')
