@@ -1,0 +1,2 @@
+model,loss,accuracy,precision,f1_score,accuracy_for_glass,accuracy_for_metal,accuracy_for_cardboard,accuracy_for_plastic,accuracy_for_paper,accuracy_for_trash
+NN,3.3825509548187256,0.1702970266342163,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
